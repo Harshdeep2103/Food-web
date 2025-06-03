@@ -1,0 +1,578 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+
+
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    background: #1AC073;
+    padding: 15px 50px;
+    width: 100%;
+    font-family: Squada One;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 20px;
+    letter-spacing: -1.2%;
+}
+
+/* Logo (Brand) */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+    /* Prevents shrinking */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+    margin-left: auto;
+    /* Pushes links to the right */
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 8px;
+    }
+}
+
+.cart-icon {
+    cursor: pointer;
+   
+    padding: 6px;
+}
+.cart-icon:hover{
+    background-color:rgb(248, 248, 0);
+    border-radius: 40px;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with transparency */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal Content */
+
+
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-heading,
+h2 {
+    text-align: ;
+    padding: 20px 0px 0px;
+    font-size: 29px;
+    font-weight: bold;
+    margin-left: 170px;
+    margin-bottom: 0px;
+}
+
+/* General styles for the grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    /* 4 columns, equal width */
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+    /* Space between grid items */
+    /* padding: 50px; */
+    padding: 19px;
+    justify-content: center;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    /* To keep content within the image and text block */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    /* Make the image fill the product block */
+    height: auto;
+    /* Keep the aspect ratio of the image */
+    border-bottom: 1px solid #ddd;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product .price {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product .rating {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on extra small screens */
+    }
+}
+
+/* Button to request dish */
+.request-dish-btn {
+    background-color: #007bff;
+    color: white;
+    width: 200px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+.request-dish-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with transparency */
+    padding-top: 60px;
+    overflow: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    justify-content: center;
+}
+
+.modal-header {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.modal-body {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.modal-body input,
+.modal-body textarea {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.cancel-btn,
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover,
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 40%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    /* border-radius: 10px; */
+
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+/* Popular items */
+body, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .popular-items-container {
+            margin: 0 auto;
+            padding: 2px;
+
+            width: 50%;
+
+        }
+
+        .popular-items-slider .item {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .popular-items-slider .item .add {
+            background-color: #28a745;
+            color: white;
+            padding: 7px;
+            border: none;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+           
+            margin-bottom: 0px;
+            Float: right;
+        }
+
+
+        .popular-items-slider .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popular-items-slider .item h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .popular-items-slider .item p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .slick-prev,
+        .slick-next {
+            background-color: #504b4b;
+            color: #fff;
+            border-radius: 50%;
+            padding: 0px;
+        }
+
+        .slick-prev:hover,
+        .slick-next:hover {
+            background-color: #1AC073;
+        }
+
+        .slick-dots li button:before {
+            color: #333;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #007bff;
+        }
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    position: relative;
+
+
+}
+
+p {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 0px;
+    padding: auto;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f2e9;
+    padding: 40px;
+}
+
+.form-section {
+    width: 50%;
+}
+
+.form-section h2 {
+    margin: 0 0 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Image Section */
+.image-section img {
+    width: 250px;
+}
+
+
+.form-section h2 {
+    margin: 10px 10px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    height:auto;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 0px;
+}
+#submit{  background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    height:auto;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 0px;
+    margin: 45px;
+
+
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Image Section */
+.image-section img {
+
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position:relative;
+}
+
+
+/* Footer */
+footer {
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    gap: space;
+    margin-left: 15px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+    margin-left: auto;
+    /* Pushes links to the right */
+}
